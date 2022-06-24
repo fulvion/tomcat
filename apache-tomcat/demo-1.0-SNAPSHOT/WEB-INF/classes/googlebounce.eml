@@ -1,0 +1,238 @@
+Delivered-To: faisal.nizamudeen@gmail.com
+Received: by 2002:a05:6a10:8364:b0:29f:9cd7:3cf4 with SMTP id o4csp361517pxf;
+        Thu, 26 May 2022 11:22:39 -0700 (PDT)
+X-Received: by 2002:a17:906:482:b0:6fe:86fa:a5c5 with SMTP id f2-20020a170906048200b006fe86faa5c5mr34447887eja.28.1653589359670;
+        Thu, 26 May 2022 11:22:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1653589359; cv=none;
+        d=google.com; s=arc-20160816;
+        b=H+3Rrwyut+vArpsnr7adqNgQiQfQLcaUm6Gz7Eoj436Aiu0Bel9Bucpji6r/2WLZ/b
+         75E3sz5ioBu93DWuucZ8/9w1OhZR0Nnq3cZKtSSie1o1WyPyVyc/xRj17FrrpVDYwqB2
+         S6Pdix3ZKd3MpZmAB+PaunPiJ7yyYMnzfbcRawDPD7FuEYd0jQhiecN6JHVPGAYBlxxt
+         iDbPZlxpMtwFFH8blpN5rg/RIReGPV4pj4h3IKN92IySb82D0A6o0XjqYX2vCKK3tTDY
+         Ch2O8CnDub8J8PkIjsyuK3KvT8gBnJeb9UqLC+/7g3uYMZqHuws4+fff5UQ40WeGyebr
+         P8Jw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:references:subject:from:date:message-id:auto-submitted
+         :to:dkim-signature;
+        bh=q6haeAnFmjkfXfXKzJpynWP/F7Sz20UDQYPbzPKS1Cw=;
+        b=0NC64nKZLKlBV9JnIo5ehPfX/VJmN0PnPxQrTwpowUhcXGqeLs25yqNOYPLsUDkeQc
+         xWDKsN1lpGnZ+P8wTUuoseCHsa5RNaXZt1sDBLfsuwYcioSps3o8MfYJJr6ZbcNd/LqU
+         3qjmcLRlv9wCGoVcfYUpK42j2fNr4UkHuMsbTUn3kpdwjBK44yj7CxkltMnnS1eWIbKj
+         p05ThfoM8eMxzh0T490CMzAKT+2EX08T2EbNgByu/jPvJW8Dt89LPwln8C+5NYz8F8MS
+         nFfI6EK0su9Hu8y/i1RX6Aj+73IZHeGVrAF+bycsKLH/VMY7o2SI+NJ3oY7tX0c9bC09
+         TzSQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20210112 header.b=i8cMLr6f;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+Return-Path: <>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id i8-20020a50c3c8000000b0042b55bb8160sor1343745edf.8.2022.05.26.11.22.39
+        for <faisal.nizamudeen@gmail.com>
+        (Google Transport Security);
+        Thu, 26 May 2022 11:22:39 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlemail.com header.s=20210112 header.b=i8cMLr6f;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f69.google.com designates 209.85.220.69 as permitted sender) smtp.helo=mail-sor-f69.google.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlemail.com; s=20210112;
+        h=to:auto-submitted:message-id:date:from:subject:references
+         :in-reply-to;
+        bh=q6haeAnFmjkfXfXKzJpynWP/F7Sz20UDQYPbzPKS1Cw=;
+        b=i8cMLr6fzNlCbVvj67+PoE8Rc9pPu/EmPunva5j0J3AznE5ds5Gs0dl2oj14WIivy9
+         FfX/+adIHNYTEk0SVfMSnawytHt4Uajkss4kkEJCtCmEQavRnxnHj+encCf1nlFWv1JE
+         52uGOkA2FVbfmhpNdjW6PYmh1/hq70cG3Q0NNTFSZH8N3MAaX3s4i5pb3YycEexI/Wf5
+         C7jWmOMIsyFHDAxBQPyauvwTzjOsEu+0byOEtYK/NSaHdQmHgWuNoSmGT/uWQ1ChaxSj
+         UpYIaNDuyPajsfmClS+9g+a+a5yq9Ezvnsayx1buffUpTgpTQDxueY2iAibv2MNlgT9j
+         DgTA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:to:auto-submitted:message-id:date:from:subject
+         :references:in-reply-to;
+        bh=q6haeAnFmjkfXfXKzJpynWP/F7Sz20UDQYPbzPKS1Cw=;
+        b=VE5aChOkelxkEkDEUKWdNcY8acUHHpu7LZnkfZybcZ9MC1ZpheFi/Uyu8OF1Qnvhi6
+         VsvGhsiPyB6dQkStovu7gwmVv8bHnCpgUW385gq3nVB1oK5mZWIyn4V8g5+3Q8S33n8i
+         Qm2dNp7+Z0hnnEv4wI9sh02DSJraMyQtRUALoKxYNjOCRC0QGnZ8KT2UbyggZJHbqd09
+         9DBNlGipzi4CUIWHYHlCphWBBVcQVIrRZaSQiTl5ZWWSMxhme4PAUlXD7SsCRxtkNk8Q
+         OB7U8SawT5FGFgiV/Jzb+ZUs6KEsayYuCObT3XDXrtkof/Xg8oeBviqYCBba7nvRm8Ql
+         slZQ==
+X-Gm-Message-SMTP.State: AOAM533O/gso7fuIyLoLxQBtE5ZVhchTZrtvFOJbR4iimJaMX8BKi09r
+	WsB6uBSYU+N1ApcKq2HlnuLcEt2Tm+nAAW7h3UHkpA==
+X-Google-Smtp-Source: ABdhPJxBtwCuk/drwko/RQH7bKxpSO4sTZfozTlQ0b8z5DDTGpWcSyqoPSPbIqzQKTTYltgl4mQ/XMBOZninQqrS9qtZM15dYSLBC9Q=
+X-Received: by 2002:a05:6402:1706:b0:42b:d175:1ef4 with SMTP id y6-20020a056402170600b0042bd1751ef4mr7536462edu.10.1653589359488;
+        Thu, 26 May 2022 11:22:39 -0700 (PDT)
+Content-Type: multipart/report; boundary="000000000000605eff05dfee465f"; report-type=delivery-status
+To: faisal.nizamudeen@gmail.com
+Received: by 2002:a05:6402:1706:b0:42b:d175:1ef4 with SMTP id
+ y6-20020a056402170600b0042bd1751ef4mr5502498edu.10; Thu, 26 May 2022 11:22:39
+ -0700 (PDT)
+Return-Path: <>
+Auto-Submitted: auto-replied
+Message-ID: <628fc56f.1c69fb81.27461.bd62.GMR@mx.google.com>
+Date: Thu, 26 May 2022 11:22:39 -0700 (PDT)
+From: Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+Subject: Delivery Status Notification (Failure)
+References: <1837601499.0.1653589353297@Faisal>
+In-Reply-To: <1837601499.0.1653589353297@Faisal>
+X-Failed-Recipients: faisal.nizamudeesssssssssssssssssssssssn@yahoo.com
+
+--000000000000605eff05dfee465f
+Content-Type: multipart/related; boundary="000000000000606be505dfee4675"
+
+--000000000000606be505dfee4675
+Content-Type: multipart/alternative; boundary="000000000000606bee05dfee4676"
+
+--000000000000606bee05dfee4676
+Content-Type: text/plain; charset="UTF-8"
+
+
+** Address not found **
+
+Your message wasn't delivered to faisal.nizamudeesssssssssssssssssssssssn@yahoo.com because the address couldn't be found, or is unable to receive mail.
+
+
+
+The response from the remote server was:
+552 1 Requested mail action aborted, mailbox not found
+
+--000000000000606bee05dfee4676
+Content-Type: text/html; charset="UTF-8"
+
+
+<html>
+<head>
+<style>
+* {
+font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" class="email-wrapper" style="padding-top:32px;background-color:#ffffff;"><tbody>
+<tr><td>
+<table cellpadding=0 cellspacing=0><tbody>
+<tr><td style="max-width:560px;padding:24px 24px 32px;background-color:#fafafa;border:1px solid #e0e0e0;border-radius:2px">
+<img style="padding:0 24px 16px 0;float:left" width=72 height=72 alt="Error Icon" src="cid:icon.png">
+<table style="min-width:272px;padding-top:8px"><tbody>
+<tr><td><h2 style="font-size:20px;color:#212121;font-weight:bold;margin:0">
+Address not found
+</h2></td></tr>
+<tr><td style="padding-top:20px;color:#757575;font-size:16px;font-weight:normal;text-align:left">
+Your message wasn't delivered to <a style='color:#212121;text-decoration:none'><b>faisal.nizamudeesssssssssssssssssssssssn@yahoo.com</b></a> because the address couldn't be found, or is unable to receive mail.
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+</td></tr>
+<tr style="border:none;background-color:#fff;font-size:12.8px;width:90%">
+<td align="left" style="padding:48px 10px">
+The response from the remote server was:<br/>
+<p style="font-family:monospace">
+552 1 Requested mail action aborted, mailbox not found
+</p>
+</td>
+</tr>
+</tbody></table>
+</body>
+</html>
+
+--000000000000606bee05dfee4676--
+--000000000000606be505dfee4675
+Content-Type: image/png; name="icon.png"
+Content-Disposition: attachment; filename="icon.png"
+Content-Transfer-Encoding: base64
+Content-ID: <icon.png>
+
+iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTdJREFUeNrsnD9sFEcUh5+PRMqZ
+yA0SPhAUQAQFUkyTgiBASARo6QApqVIkfdxGFJFSgGhJAUIiBaQB0ZIOKVCkwUgURjIg2fxL4kS+
+YDvkbC/388bi8N16Z4/d7J/5PsniuD3fyePP772ZeTsDQRAYQL/UGAJAIEAgQCBAIAAEAgQCBAIE
+AkAgyJT3Mv+Eq7vYK8mTE+MDRCAghQECAeRQA5V2ZOpmg5vDx3NPzRbmGRMEcmTrEbNNB8zWfRD+
+f/Efs2e3zCZvMjaksBg27TfbcuSNPEKP9ZyuAQKtHX2O9ncNgWC57umMPKvRNb0GEKgnLoUyxTQC
+rcns0/6uIRAs8/hGf9cQCJZpTpjdO2f25/03z+mxntM1eLtsZAgiUtX4JcaBCAQIBAgECARQ8CJa
+G5jab4J4pm4WZmO3OALVh802fIwcLkyPkcKAGggAgQCBAIEAgQCBABAIEAjKA/1AnahhbO5FdOOY
+VsrrDbPBYcYKgf5D2wLaV3p+22xh1u17tO3S+DTcvxvagUDeivPgx/a/95J/73w7Sj26Hn4pKo2M
+ehuV/KyBJM6d0f7k6RKx/R63vvL2tmf/ItDdM2ZTP6f7nkp9Y2fDx1v9akmpIU+KSCLVUghUQfSL
+zVKeTklbLxGoctw/nzC5rw8L5KRNbkpnKq6pgSqEClzNnFzY+XnYWrt6VpVk1vbwWvg+RKCKMOUw
+Q1LEOXA+/MX3mpJvGDHb265xtnzmFoUK1HaKQGlMtePYM+q2KKjXuaS1NJYIEKgI8jhEgqHt4cqy
+Ky53j3hyHz2bqSLp2o2LbJ7MxKovkGqXteoWpaOk96O9/yF/dF7NwlS36AuIQIBA5celQK4PIxBE
+4LLzrtoLgaALdSy6CJRkWQCBPGLsTHznomZ9nszUECgJ2ml3WWHe+QVFNPSQx6UdZNtxr9pbEShN
+eTTz8mQXHoHSlke7+Z+c9m6VGoHSkEfs/trLW3wQKApN1V3lGfnGu2Z6BFoLtYCs3GWBPAiUCLVh
+/HoaeRCoT9R873KLM/IgUBfapnCpe5AHgXry4pf412ihEHkQqCdxd5VqrcezhUIESsJMTJ+Pdthp
+Z0WgyNlXXPHc2Mc4IVAELl2Gnh8mhUDvCkfbIVAkcbf/aOoO3fMKhqAD3frTa4quwpn0hUDOkQhI
+YYBAgECAQAAU0QlYObl+5Ug8NcprZkZxjUCxRPVA6zmtEXHCBykskrhjgHXN09PoEcgFl4M4H11j
+nBAoApcj6ZoPGScEAgTKApcDoTw5sgWB+sGlz1n90IBAPdE6j1o21PfcC11jLagL1oFWRyGlKU3p
+OxcSJQ7NZAjkhHp/uG2HFAYIBAgECASAQIBAgECAQAAIBOkxEARBtp9wdVfAMOfIifEBIhCQwgCB
+ABAI0oV2jhxZ+nfBatuPZfgBCy0Eqqo8c01b+uu51XZvzOgDWoHNTGR+pCwpLEd5svuAZXlO2uEr
+PyEQ8hRWHgRCHmqg0sjTnLalv6crJQ8C/U8stqNO0I4+VZOHFIY8COS1PGL2ybd5yUMKK7s8zYmL
+dujyd3n+nESgcsvzZd4/KwIhDwIhT35QA6UyE1qyxZnfvJMHgdKS549JC1qvvJOHFIY8CFR5eV5O
+XimqPAhUdHnmfx+zgxdOFXkoqIGKKs/cswnb/8Oeog8HEai48nxUhiFBIORBIOShBioskkbySCLk
+IQIhDwIhj28p7FApR6b1qlEbHGpkO/rr6215vi/zH1r2x7tApSGFAQIBAgECAQIBIBAgECAQIBBA
+LK8FGADCTxYrr+EVJgAAAABJRU5ErkJggg==
+--000000000000606be505dfee4675--
+--000000000000605eff05dfee465f
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; googlemail.com
+Received-From-MTA: dns; faisal.nizamudeen@gmail.com
+Arrival-Date: Thu, 26 May 2022 11:22:38 -0700 (PDT)
+X-Original-Message-ID: <1837601499.0.1653589353297@Faisal>
+
+Final-Recipient: rfc822; faisal.nizamudeesssssssssssssssssssssssn@yahoo.com
+Action: failed
+Status: 5.0.0
+Remote-MTA: dns; mta6.am0.yahoodns.net. (67.195.204.79, the server for the
+ domain yahoo.com.)
+Diagnostic-Code: smtp; 552 1 Requested mail action aborted, mailbox not found
+Last-Attempt-Date: Thu, 26 May 2022 11:22:39 -0700 (PDT)
+
+--000000000000605eff05dfee465f
+Content-Type: message/rfc822
+
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=BlQcq2nRyOoFfyzWEbLmq2H1urxNUCuQTDMxlxzhkPQ=;
+        b=Ww1CPu3vyZQgqS5c1B5jf3OxXd/e/uZ9QdJRXGF011cQEZct7LRpj0JDCh4/g9H2vf
+         qq7YXr0klpEOhWq5kxdOPU/g2ka6lOkbH0jTCLeCiwGGDHy2mNzO/Xa2Q+6Mz7rjE71n
+         0laMrT9QIZPceMFw0tMfYJfhjPQbsLPvLZ5Nozyt8myFHrg3YiS1Ag3iXZozsBUNkOwr
+         dyT2mCPSDv/gMFke+xNgeszhjguf5l3OL4Nqmq5XdkShkSs4ubhgRZyxWGVB6l2zqayf
+         lcjpe6DNYWmf+lcdogYUvI2txSIS5Uxbh6dKNzQXPXRniTnB/S5t5jXX3Q7ca4SIazq0
+         Yclw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=BlQcq2nRyOoFfyzWEbLmq2H1urxNUCuQTDMxlxzhkPQ=;
+        b=v/KTCAhKwBemgH02Q6EoqRQrSURVGAPmvapCyiNyHZPIs39rpMpbnriMx4OLIEqM/e
+         RpE4yV6IXsdSAJNPjjS7TSFlkTaRPPwWaB2ijqg0iSklWrmvzSYtsXCIG4NaDcWHSfs3
+         uZqTwruO9Vpds5sSu6FQoFoTqVzwA0bf6OuJYFQkjlSDUeyFcdGewIc7U7mfMucXz3Pn
+         aB6zquQuWRhjAjnF179em6YxTkkkb6zkZHBiG7IgLgWbXBUVIivqmxr8d3VaUYm9/+E3
+         xWLxIRuEEpN4hk+1Ab4yVAsbAle7FyUxOtFdaRQpB6wdibSgPGQFIVJNcACWDy5lIvy3
+         Ug7Q==
+X-Gm-Message-SMTP.State: AOAM531PMusoQdl2YUrXnCuWpP0r3waQ97BIidfp+AbYwpQnEe1N3/X1
+	bEYSY6FBQyCvPqyeDubrBThD4VBdqIE=
+X-Google-Smtp-Source: ABdhPJwnGZQZljEnrSAEAA20U+WMrOTRf4Tnk1mJ5832Gxhg4NuwOoGN2yR2pY79UDBlgqxX8IfhXA==
+X-Received: by 2002:a05:6402:1706:b0:42b:d175:1ef4 with SMTP id y6-20020a056402170600b0042bd1751ef4mr7536382edu.10.1653589358469;
+        Thu, 26 May 2022 11:22:38 -0700 (PDT)
+Return-Path: <faisal.nizamudeen@gmail.com>
+Received: from Faisal (wlan080222.mobiel.utwente.nl. [130.89.80.222])
+        by smtp.gmail.com with ESMTPSA id ay21-20020a170906d29500b006feba4ef020sm709375ejb.180.2022.05.26.11.22.37
+        for <faisal.nizamudeesssssssssssssssssssssssn@yahoo.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 26 May 2022 11:22:38 -0700 (PDT)
+Date: Thu, 26 May 2022 20:22:33 +0200 (CEST)
+From: faisal.nizamudeen@gmail.com
+To: faisal.nizamudeesssssssssssssssssssssssn@yahoo.com
+Message-ID: <1837601499.0.1653589353297@Faisal>
+Subject: Testing from Simple Java Mail
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+This is a test SMTP.Email!
+
+--000000000000605eff05dfee465f--
